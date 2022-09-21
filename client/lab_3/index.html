@@ -8,7 +8,6 @@
     <head>
       <title>Lab2</title>
       <link rel="stylesheet" href="style.css">
-      <script src="script.js" defer></script>
     </head>
     <body>
     <div class="wrapper">
@@ -28,23 +27,21 @@
       </div>
       <div class="box right_section">
         <h3>Image Carousel</h3>
-        <div class = "div.carousel">
-          <button class="prev">previous</button>
-          <button class="next">next</button>
-            <ul class="carousel_item">
-              <li class = "slides">
-                <img src='images/deer.jpeg' alt='deer' />
-              </li>
-              <li class = "slides">
-                <img src='images/Lake.jpeg' alt='lake'/>
-              </li>
-              <li class = "slides">
-                <img src='images/mountain.jpeg' alt='mountain'/>
-              </li>
-              <li class = "slides">
-                <img src='images/pink.jpeg' alt='pink'/>
-              </li>
-            </ul>
+        <div class = "carousel">
+            <div class = "carousel_item carousel_item--visible">
+              <img src='images/deer.jpeg' alt='deer' />
+            </div>
+            <div class = "carousel_item">
+              <img src='images/Lake.jpeg' alt='lake'/>
+            </div>
+            <div class = ".carousel_item">
+              <img src='images/mountain.jpeg' alt='mountain'/>
+            </div>
+            <div class = "carousel_item">
+              <img src='images/pink.jpeg' alt='pink'/>
+            </div>
+            <button class = "prev">prev</button>
+            <button class = "next">next</button>
         </div>
         <div class="box">Images of different mochis</div>
       </div>
@@ -52,5 +49,6 @@
       <footer class="footer">Account Name: colbychung01 Link: <a>github.com/colbychung01/INST377-Lab-Work</a>
       </footer>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>

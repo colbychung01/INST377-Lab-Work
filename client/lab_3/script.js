@@ -19,18 +19,18 @@ const slidesArray = Array.from(slides);
 const totalSlides = slidesArray.length;
 
 function updateSlidePosition() {
-  slidesArray.forEach(element => {
-    element.classList.remove('carousel_item--visible');
-    element.classList.add('carousel_item--hidden');
+  slidesArray.forEach((element) => {
+    element.classList.remove('visible');
+    element.classList.add('hiddle');
   });
-  slidesArray[slidePosition].classList.add('carousel_item--visible');
+  slidesArray[slidePosition].classList.add('visible');
 }
 
 function moveToNextSlide() {
   if (slidePosition === totalSlides - 1) {
     slidePosition = 0;
   } else {
-    slidePosition = slidePosition + 1;
+    slidePosition += 1;
   }
   updateSlidePosition();
 }
@@ -38,7 +38,7 @@ function moveToPrevSlide() {
   if (slidePosition === 0) {
     slidePosition = totalSlides - 1;
   } else {
-    slidePosition = slidePosition - 1;
+    slidePosition -= 1;
   }
   updateSlidePosition();
 }

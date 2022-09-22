@@ -238,7 +238,7 @@ div.carousel {
     - now make sure that images are _always_ square
     - ... there's a reason crop tools are popular in image editors
    */
-  width: 300px; 
+  width: 150px; 
 }
 
 .prev,
@@ -264,5 +264,5 @@ div.carousel {
 .prev:hover,
 .next:hover {
   /* Pick a good background colour for your hover pseudoclass */
-  background-color: rgba(192,192,192,1);
+  background-color: rgba(0,128,128, 1);
 }

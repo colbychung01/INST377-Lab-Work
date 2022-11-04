@@ -122,12 +122,10 @@ async function mainEvent() {
 
     form.addEventListener('input', (event) => {
       console.log(event.target.value);
-      filteredList = filterList(currentList, event.target.value);
+      const filteredList = filterList(currentList, event.target.value);
       injectHTML(filteredList);
     });
-    form.addEventListener('input', (event) => {
-      console.log(event.target.value);
-    });
+
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
     form.addEventListener('submit', (submitEvent) => {
@@ -136,7 +134,6 @@ async function mainEvent() {
 
       // This constant will have the value of your 15-restaurant collection when it processes
       currentList = processRestaurants(arrayFromJson.data);
-      console.log(currentList);
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(currentList);
 

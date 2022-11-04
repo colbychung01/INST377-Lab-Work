@@ -28,7 +28,7 @@ function injectHTML(list) {
   list.forEach((item) => {
     const el = document.createElement('li');
     el.innerText = item.name;
-    target.appendChild(el);
+    listEl.appendChild(el);
   });
   /*
   ## JS and HTML Injection
@@ -150,7 +150,7 @@ function processRestaurants(list) {
 
 function filterList(array, filterInputValue) {
     return array.filter((item) => {
-        if (!item.name) { return }
+        if (!item.name) { return; }
         const lowerCaseName = item.name.toLowerCase();
         const lowerCaseQuery = item.name.toLowerCase();
         return lowerCaseName.includes(lowerCaseQuery);

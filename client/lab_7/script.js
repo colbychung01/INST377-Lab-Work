@@ -28,7 +28,7 @@ function injectHTML(list) {
   list.forEach((item) => {
     const el = document.createElement('li');
     el.innerText = item.name;
-    listEl.appendChild(el);
+    target.appendChild(el);
   });
   /*
   ## JS and HTML Injection
@@ -123,7 +123,7 @@ async function mainEvent() {
     form.addEventListener('input', (event) => {
       console.log(event.target.value);
       const filteredList = filterList(currentList, event.target.value);
-      injectHTML(currentList);
+      injectHTML(filteredList);
     });
 
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked

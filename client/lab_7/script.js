@@ -123,7 +123,7 @@ async function mainEvent() {
     form.addEventListener('input', (event) => {
       console.log(event.target.value);
       const filteredList = filterList(currentList, event.target.value);
-      injectHTML(filteredList);
+      injectHTML(currentList);
     });
 
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
